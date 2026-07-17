@@ -123,16 +123,31 @@ function checkBattleEnd() {
     return true;
   }
 
-  if (alliesAlive === 0) {
-    battleState.finished = true;
-    infoText.textContent = 'Поражение';
-    clearButtons();
-    clearTurnHighlight();
-    return true;
-  }
+if (alliesAlive === 0) {
+  battleState.finished = true;
+  infoText.textContent = 'Поражение';
+  clearButtons();
+  clearTurnHighlight();
+  addRetryButton();
+  return true;
+}
 
   return false;
 }
+
+function addRetryButton() {
+  const btn = document.createElement('button');
+  btn.className = 'btn';
+  btn.textContent = 'Попробовать еще раз';
+
+  btn.addEventListener('click', () => {
+    resetBattleState();
+    initBattle();
+  });
+
+  actionButtons.appendChild(btn);
+}
+
 
 function nextTurn() {
   if (battleState.finished) return;
