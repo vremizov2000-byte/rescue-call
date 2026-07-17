@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Looking for Rescue</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app" id="app">
+    <main class="main-screen">
+      <div class="scene" id="scene">
+        <img id="mainMap" class="bg" src="locations/map.png" alt="Map"/>
+
+        <img id="pinAirport" class="pin" src="locations/pin_airport.png" style="display:none; left:767px; top:770px;" />
+        <img id="pinPoor" class="pin" src="locations/pin_poor.png" style="display:none; left:810px; top:463px;" />
+        <img id="pinFib" class="pin" src="locations/pin_fib.png" style="display:none; left:579px; top:650px;" />
+        <img id="pinRich" class="pin" src="locations/pin_rich.png" style="display:none; left:240px; top:375px;" />
+        <img id="pinBallas" class="pin" src="locations/pin_ballas.png" style="display:none; left:1325px; top:625px;" />
+        <img id="pinCityHall" class="pin" src="locations/pin_cityhall.png" style="display:none; left:700px; top:510px;" />
+        <img id="pinGasStation" class="pin" src="locations/pin_gasstation.png" style="display:none; left:933px; top:510px;" />
+        <img id="pinDealer" class="pin" src="locations/pin_dealer.png" style="display:none; left:1123px; top:480px;" />
+        <img id="pinMotel" class="pin" src="locations/pin_motel.png" style="display:none; left:1153px; top:220px;" />
+
+        <img id="pinFriendHouse" class="pin" src="locations/pin_friendHouse.png" style="display:none; left:1105px; top:915px;" />
+        <img id="pinCasino" class="pin" src="locations/pin_Casino.png" style="display:none; left:830px; top:800px;" />
+        <img id="pinWarehouse" class="pin" src="locations/pin-Warehouse.png" style="display:none; left:680px; top:870px;" />
+        <img id="pinStopCar" class="pin" src="locations/pin_stopCar.png" style="display:none; left:980px; top:300px;" />
+        <img id="pinYakuza" class="pin" src="locations/pin_Yakuza.png" style="display:none; left:705px; top:100px;" />
+
+        <div class="center-title hidden" id="mainTitle">Looking for Rescue</div>
+
+        <div id="battleScreen">
+          <img id="battlefield" style="display:none;" />
+
+          <img id="firstPosEnemy" class="enemy" style="display:none; left:1210px; top:600px;" />
+          <div id="firstPosEnemyHp" class="hp-text" style="position: absolute; display:none; left:1210px; top:600px;">100/100</div>
+
+          <img id="secondPosEnemy" class="enemy" style="display:none; left:990px; top:575px;" />
+          <div id="secondPosEnemyHp" class="hp-text" style="position: absolute; display:none; left:990px; top:575px;">100/100</div>
+
+          <img id="thirdPosEnemy" class="enemy" style="display:none; left:1100px; top:680px;" />
+          <div id="thirdPosEnemyHp" class="hp-text" style="position: absolute; display:none; left:1100px; top:680px;">100/100</div>
+
+          <img id="firstPos" class="ally" style="display:none; left:400px; top:650px;" />
+          <div id="firstPosHp" class="hp-text" style="position: absolute; display:none; left:400px; top:650px;">100/100</div>
+
+          <img id="secondPos" class="ally" style="display:none; left:575px; top:680px;" />
+          <div id="secondPosHp" class="hp-text" style="position: absolute; display:none; left:575px; top:680px;">100/100</div>
+
+          <img id="thirdPos" class="ally" style="display:none; left:700px; top:600px;" />
+          <div id="thirdPosHp" class="hp-text" style="position: absolute; display:none; left:700px; top:600px;">100/100</div>
+        </div>
+<!--
+        <div id="battleAbilities">
+
+          <img id="firstAbility" src="ability/baseColt.png" class="pinA" style="display:none; left:350px; top:980px;" />
+
+          <img id="secondAbility" src="ability/hugeEmpty.png" class="pinA" style="display:none; left:550px; top:980px;" />
+
+          <img id="thirdAbility" src="ability/baseTearGas.png" class="pinA" style="display:none; left:750px; top:980px;" />
+
+          <img id="fourthAbility" src="ability/ultCall.png" class="pinA" style="display:none; left:950px; top:980px;" />
+
+          <img id="fifthAbility" src="ability/itemEmpty.png" class="pinA" style="display:none; left:1150px; top:980px;" />
+
+        </div>
+-->
+        <div id="battleButtons"></div>    
+      </div>
+    </main>
+    <div class="info-panel">
+      <img class="info-image" id="infoImage" src="Bruno/bruno0.jpg" left:900px; alt="info" />
+      <div class="info-text" id="infoText">Пропущенный звонок</div>
+
+      <div class="buttons" id="actionButtons">
+        <button class="btn" id="voiceBtn">Послушать голосовое</button>
+      </div>
+    </div>    
+  </div>
+
+  <script src="stats.js"></script>
+  <script src="battle.js"></script>
+  <script src="Team/faction.js"></script>
+  <script src="game.js"></script>
+  <script src="game-lv.js"></script>
+</body>
+</html>
